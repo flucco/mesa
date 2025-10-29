@@ -157,7 +157,7 @@ class AltairBackend(AbstractRenderer):
             raw_marker = (
                 aps.marker if aps.marker is not None else style_fields.get("marker")
             )
-            shape_value = marker_to_shape_map.get(raw_marker, raw_marker)
+            shape_value = marker_to_shape_map.get(raw_marker, None)
             if shape_value is None:
                 warnings.warn(
                     f"Marker '{raw_marker}' is not supported in Altair. "
